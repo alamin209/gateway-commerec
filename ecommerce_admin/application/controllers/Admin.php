@@ -24,4 +24,12 @@ class Admin extends CI_Controller {
 			redirect('Admin');
 		}
 	}
+
+
+
+	public function catagory()
+    {
+        $this->load->view('admin/Category');
+
+    }
 }
