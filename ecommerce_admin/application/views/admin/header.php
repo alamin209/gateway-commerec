@@ -7,6 +7,8 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="<?= base_url('assets/admin/')?>css/bootstrap.min.css" >
+    <link rel="stylesheet" href="<?= base_url('assets/admin/')?>css/modal.css" >
+
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
     <link href="<?= base_url('assets/admin/')?>css/style.css" rel='stylesheet' type='text/css' />
@@ -24,6 +26,7 @@
     <script src="<?= base_url('assets/admin/')?>js/jquery2.0.3.min.js"></script>
     <script src="<?= base_url('assets/admin/')?>js/raphael-min.js"></script>
     <script src="<?= base_url('assets/admin/')?>js/morris.js"></script>
+
 </head>
 <body>
 <section id="container">
@@ -227,13 +230,13 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <img alt="" src="images/2.png">
-                        <span class="username">John Doe</span>
+                        <span class="username"><?php echo $this->session->userdata('name')?></span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
                         <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                         <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                        <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                        <li><a href="<?php echo base_url()?>login/logout"><i class="fa fa-key"></i> Log Out</a></li>
                     </ul>
                 </li>
                 <!-- user login dropdown end -->
