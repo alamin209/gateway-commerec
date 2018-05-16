@@ -20,7 +20,7 @@
             </label>
             <div class="col-md-5">
 
-                <select class="form-control input-height"  id="status" required name="status">
+                <select class="form-control input-height"  id="CategoryStatus" required name="CategoryStatus">
                     <option value="">Select Status...</option>
                     <option value="1">Active</option>
                     <option value="0">In-Active</option>
@@ -33,7 +33,7 @@
             <span class="required"> Image* </span>
         </label>
         <div class="col-md-5">
-            <input type="file" id="imageFile" name="image">
+            <input type="file" id="imageFile" name="photo">
         </div>
     </div>
 

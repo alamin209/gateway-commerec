@@ -13,7 +13,14 @@
                 <div class="panel-heading">
                     Category Table
                 </div>
+                <?php if ($this->session->flashdata('errorMessage')!=null){?>
+                    <div class="alert alert-danger" align="center"><strong><?php echo $this->session->flashdata('errorMessage');?></strong></div>
+                <?php }
+                elseif($this->session->flashdata('successMessage')!=null){?>
+                    <div class="alert alert-success" align="center"><strong><?php echo $this->session->flashdata('successMessage');?></strong></div>
+                <?php }?>
                 <br/>
+
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="btn-group">
@@ -39,28 +46,42 @@
                         <tr >
                             <th data-breakpoints="xs">Sr.NO</th>
                             <th>Catagory Name</th>
-                            <th>Description</th>
+                            <th>Category Image</th>
                             <th data-breakpoints="xs">Category Adding Date</th>
                             <th>Action</th>
 
                         </tr>
                         </thead>
                         <tbody>
+                        <?php $i=0; $i=1; foreach ($category as $c)
+                            { ?>
+
                         <tr class="odd gradeX">
 
-                            <td>8</td>
-                            <td>Lorriane</td>
-                            <td>Cooke</td>
-                            <td>Technical Services Librarian</td>
-                            <td>April 7th 1969</td>
+                            <td><?php echo $i ?></td>
+                            <td><?php  echo $c->name ?></td>
+                            <td><?php  echo $c->image ?></td>
+                            <td><?php echo $c->insertDate ?></td>
+                            <td class="center">
+                                <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $c->id ?>" onclick="selectid2(this)">
+
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+
+                                <button type="button" data-panel-id="<?php echo $c->id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
+
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+
                         </tr>
+
+                        <?php $i++; } ?>
+
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div>
-
-            <div class="clearfix"> </div>
         </div>
         <div id="myModal" class="modal">
             <br/><br/><br/>
@@ -72,8 +93,12 @@
 
             </div>
 
-
         </div>
+
+            <div class="clearfix"> </div>
+        </div>
+
+
 
 
     </section>
