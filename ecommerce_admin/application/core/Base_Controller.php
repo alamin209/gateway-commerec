@@ -11,6 +11,8 @@ abstract class Base_Controller extends CI_Controller
     {
         parent::__construct();
         $this->user_id = $this->session->userdata('id');
+        $user_id = $this->session->userdata('id');
+
     }
 
     public function msg($msg){
@@ -54,7 +56,7 @@ abstract class Base_Controller extends CI_Controller
 
     public function updatePhoto(){
 
-        $config['upload_path'] = './assets/backend/uploads/';
+        $config['upload_path'] = './assets/admin/uploads/';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = 1024;
         // $config['max_width'] = 300;

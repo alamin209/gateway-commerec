@@ -64,39 +64,38 @@ class Category extends Base_Controller {
 
             $categoryName = $this->input->post('catagoryname');
             $CategoryStatus = $this->input->post('CategoryStatus');
-            $data['photo'] = $this->uploadPhoto();
+            $photo = $this->uploadPhoto();
 
 
-            print_r($data['photo']);
+            $userId = $this->session->userdata('id');
 
-//            $userId = $this->session->userdata('id');
-//
-//
-//            $data = array(
-//                'name' => $categoryName,
-//                'fkInsertBy' => $userId,
-//                'CategoryStatus' => $CategoryStatus
-//
-//            );
-//            $this->data['error'] = $this->Categorym->insertCategory($data);
-//
-//            if (empty($this->data['error'])) {
-//
-//                $this->session->set_flashdata('successMessage', 'Category Added Successfully');
-//                redirect('Category');
-//
-//            } else {
-//
-//                $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
-//                redirect('Category');
-//
-//
-//            }
-//        }
-//        else {
-//            redirect('Login');
-//        }
+
+            $data = array(
+                'name' => $categoryName,
+                'fkInsertBy' => $userId,
+                'CategoryStatus' => $CategoryStatus,
+                'image'=>$photo
+
+            );
+            $this->data['error'] = $this->Categorym->insertCategory($data);
+
+            if (empty($this->data['error'])) {
+
+                $this->session->set_flashdata('successMessage', 'Category Added Successfully');
+                redirect('Category');
+
+            } else {
+
+                $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
+                redirect('Category');
+
+
+            }
         }
+        else {
+            redirect('Login');
+        }
+
     }
 
 
@@ -106,7 +105,7 @@ class Category extends Base_Controller {
 
             $cat_id = $this->input->post('id');
             $data['categoryInfo'] = $this->Categorym->getCatgoryById($cat_id);
-            $this->load->view('Category/updateCategory',$data);
+            $this->load->view('admin/updateCategory',$data);
 
         } else {
             redirect('Login');
@@ -117,27 +116,49 @@ class Category extends Base_Controller {
     {
         if ($this->session->userdata('userType') == "Admin") {
 
-            $data = array(
-                'name'=> $this->input->post('catagoryname'),
-                'description'=> $this->input->post('description')
 
-            );
+            if(isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '') ) {
 
-            $this->data['error'] = $this->Categorym->updateCategoryById($id, $data);
+                $categoryName = $this->input->post('catagoryname');
+                $CategoryStatus = $this->input->post('CategoryStatus');
+//            $photo = $this->uploadPhoto();
 
-            if (empty($this->data['error'])) {
+                print_r($categoryName);
+                print_r($CategoryStatus);
 
-                $this->session->set_flashdata('successMessage','Category Updated Successfully');
-                redirect('Category');
+                $userId = $this->session->userdata('id');
 
-            } else {
 
-                $this->session->set_flashdata('errorMessage','Some thing Went Wrong !! Please Try Again!!');
-                redirect('Category');
+                $photo = $this->updatePhoto();
 
+
+                $data = array(
+                    'name' => $categoryName,
+                    'fkInsertBy' => $userId,
+                    'CategoryStatus' => $CategoryStatus,
+                    'image' => $photo
+
+                );
+
+
+                $this->data['error'] = $this->Categorym->updateCategoryById($id, $data);
+
+
+                if (empty($this->data['error'])) {
+
+                    $this->session->set_flashdata('successMessage', 'Category Updated Successfully');
+                    redirect('Category');
+
+                } else {
+
+                    $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
+                    redirect('Category');
+
+                }
+            }
             }
 
-        } else {
+         else {
             redirect('login');
         }
     }
@@ -154,5 +175,25 @@ class Category extends Base_Controller {
             redirect('Login');
         }
     }
+
+    public  function subCategory()
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+
+            $id = $this->input->post('id');
+
+//            $this->Categorym->deleteCategoryById($id);
+
+        }
+        else{
+            redirect('Login');
+        }
+
+
+
+    }
+
+
+
 
 }

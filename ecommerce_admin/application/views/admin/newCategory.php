@@ -1,4 +1,4 @@
-<form action="<?php echo base_url()?>Category/addCategory"  method="post" id="form_sample_1" class="form-horizontal">
+<form action="<?php echo base_url()?>Category/addCategory"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
     <div class="form-body">
 
         <div class="form-group">

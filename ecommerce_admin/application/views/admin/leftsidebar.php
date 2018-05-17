@@ -10,10 +10,33 @@
                     </a>
                 </li>
 
+<!--                <li>-->
+<!--                    <a class="active" href="--><?php //echo base_url()?><!--Category">-->
+<!--                        <i class="icon-food"></i>-->
+<!--                        <span>Category</span>-->
+<!--                    </a>-->
+<!--                    <ul class="sub">-->
+<!--                        <li><a href="typography.html">Sub Category</a></li>-->
+<!--                        <li><a href="glyphicon.html">glyphicon</a></li>-->
+<!--                        <li><a href="grids.html">Grids</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="icon-food"></i>
+                        <span>Mange Category</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo base_url() ?>Category">Category</a></li>
+                        <li><a href="<?php echo base_url() ?>Category/subCategory">Sub-Category</a></li>
+                        <li><a href="grids.html">Grids</a></li>
+                    </ul>
+                </li>
                 <li>
-                    <a class="active" href="<?php echo base_url()?>Category">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Category</span>
+                    <a class="active" href="<?php echo base_url()?>User">
+                        <i class="fa icon-user "></i>
+                        <span>User</span>
                     </a>
                 </li>
                 <li class="sub-menu">
