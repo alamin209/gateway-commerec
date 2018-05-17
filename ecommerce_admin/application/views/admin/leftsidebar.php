@@ -10,8 +10,15 @@
                     </a>
                 </li>
 
+                 <li>
+                    <a href="<?php echo base_url('Slide')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Slide</span>
+                    </a>
+                </li>
+
                 <li>
-                    <a class="active" href="<?php echo base_url()?>Category">
+                    <a href="<?php echo base_url()?>Category">
                         <i class="fa fa-dashboard"></i>
                         <span>Category</span>
                     </a>
