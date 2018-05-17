@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Category extends CI_Controller {
+class Category extends Base_Controller {
 
     public function __construct()
     {
@@ -50,37 +50,52 @@ class Category extends CI_Controller {
 
     public  function  addCategory()
     {
-        if ($this->session->userdata('userType') == "Admin")
-        {
+        $this->load->library('form_validation');
+        if ($this->session->userdata('userType') == "Admin") {
+
+
+//            $this->form_validation->set_rules('catagoryname', 'Category name', 'required');
+
+//            if($this->form_validation->run() == FALSE) {
+
+//
+//                $this->load->view('admin/newCategory');
+
 
             $categoryName = $this->input->post('catagoryname');
-            $description = $this->input->post('description');
+            $CategoryStatus = $this->input->post('CategoryStatus');
+            $data['photo'] = $this->uploadPhoto();
 
-            $userId=$this->session->userdata('id');
 
-            $data = array(
-                'name' => $categoryName,
-                'fkInsertBy' =>$userId,
-                'description'=>$description
+            print_r($data['photo']);
 
-            );
-            $this->data['error'] = $this->Categorym->insertCategory($data);
-
-            if (empty($this->data['error'])) {
-
-                $this->session->set_flashdata('successMessage','Category Added Successfully');
-                redirect('admin/allCategory');
-
-            } else {
-
-                $this->session->set_flashdata('errorMessage','Some thing Went Wrong !! Please Try Again!!');
-                redirect('admin/allCategory');
-
-            }
-
-        }
-        else {
-            redirect('Login');
+//            $userId = $this->session->userdata('id');
+//
+//
+//            $data = array(
+//                'name' => $categoryName,
+//                'fkInsertBy' => $userId,
+//                'CategoryStatus' => $CategoryStatus
+//
+//            );
+//            $this->data['error'] = $this->Categorym->insertCategory($data);
+//
+//            if (empty($this->data['error'])) {
+//
+//                $this->session->set_flashdata('successMessage', 'Category Added Successfully');
+//                redirect('Category');
+//
+//            } else {
+//
+//                $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
+//                redirect('Category');
+//
+//
+//            }
+//        }
+//        else {
+//            redirect('Login');
+//        }
         }
     }
 
@@ -113,12 +128,12 @@ class Category extends CI_Controller {
             if (empty($this->data['error'])) {
 
                 $this->session->set_flashdata('successMessage','Category Updated Successfully');
-                redirect('Admin-Category');
+                redirect('Category');
 
             } else {
 
                 $this->session->set_flashdata('errorMessage','Some thing Went Wrong !! Please Try Again!!');
-                redirect('Admin-Category');
+                redirect('Category');
 
             }
 

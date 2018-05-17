@@ -5,7 +5,7 @@ class Categorym extends CI_Model
 {
     public  function getAllCategory()
     {
-        $this->db->order_by('id','DESC');
+        $this->db->select('*');
         $query=$this->db->get('catagory');
         return $query->result();
     }
