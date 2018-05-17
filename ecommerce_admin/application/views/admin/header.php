@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Visitors</title>
+    <title>Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG," />

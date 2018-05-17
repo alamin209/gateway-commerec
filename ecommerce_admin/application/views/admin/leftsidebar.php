@@ -10,6 +10,7 @@
                     </a>
                 </li>
 
+<<<<<<< HEAD
 <!--                <li>-->
 <!--                    <a class="active" href="--><?php //echo base_url()?><!--Category">-->
 <!--                        <i class="icon-food"></i>-->
@@ -37,6 +38,17 @@
                     <a class="active" href="<?php echo base_url()?>User">
                         <i class="fa icon-user "></i>
                         <span>User</span>
+                 <li>
+                    <a href="<?php echo base_url('Slide')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Slide</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url()?>Category">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Category</span>
                     </a>
                 </li>
                 <li class="sub-menu">
