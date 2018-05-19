@@ -50,33 +50,23 @@ class Category extends Base_Controller {
 
     public  function  addCategory()
     {
-        $this->load->library('form_validation');
         if ($this->session->userdata('userType') == "Admin") {
-
-
-//            $this->form_validation->set_rules('catagoryname', 'Category name', 'required');
-
-//            if($this->form_validation->run() == FALSE) {
-
-//
-//                $this->load->view('admin/newCategory');
-
 
             $categoryName = $this->input->post('catagoryname');
             $CategoryStatus = $this->input->post('CategoryStatus');
-            $photo = $this->uploadPhoto();
-
-
+            $path='./assets/admin/uploads/';
+            $photo = $this->uploadPhoto($path);
             $userId = $this->session->userdata('id');
-
-
             $data = array(
                 'name' => $categoryName,
-                'fkInsertBy' => $userId,
                 'CategoryStatus' => $CategoryStatus,
                 'image'=>$photo
 
             );
+
+            print_r($data);
+            exit;
+
             $this->data['error'] = $this->Categorym->insertCategory($data);
 
             if (empty($this->data['error'])) {
@@ -121,17 +111,9 @@ class Category extends Base_Controller {
 
                 $categoryName = $this->input->post('catagoryname');
                 $CategoryStatus = $this->input->post('CategoryStatus');
-//            $photo = $this->uploadPhoto();
-
-                print_r($categoryName);
-                print_r($CategoryStatus);
-
                 $userId = $this->session->userdata('id');
-
-
-                $photo = $this->updatePhoto();
-
-
+                $path='./assets/admin/uploads/';
+                $photo = $this->uploadPhoto($path);
                 $data = array(
                     'name' => $categoryName,
                     'fkInsertBy' => $userId,
@@ -182,7 +164,27 @@ class Category extends Base_Controller {
 
             $id = $this->input->post('id');
 
-//            $this->Categorym->deleteCategoryById($id);
+            $data['subcategory'] = $this->Categorym->getAllSubCategoryNameId();
+            $this->load->view('admin/allSubCategory', $data);
+
+
+        }
+        else{
+            redirect('Login');
+        }
+
+    }
+
+    public  function newSubCategory()
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+
+            $id = $this->input->post('id');
+            $data['category'] = $this->Categorym->getAllCategory();
+
+
+            $this->load->view('admin/addNewSubCategory',$data);
+
 
         }
         else{
@@ -193,7 +195,111 @@ class Category extends Base_Controller {
 
     }
 
+    public  function  addSubCategory()
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+            $categoryName = $this->input->post('subcatagoryname');
+            $categoryid = $this->input->post('categoryid');
+            $subCategoryStatus = $this->input->post('subCategoryStatus');
+//            $path = './assets/admin/uploads/subCatogory/';
+            $path= './assets/admin/uploads/subCatogory/';
+            $photo = $this->uploadPhoto($path);
+            $userId = $this->session->userdata('id');
+            $data = array(
+                'InsertBy' => $userId,
+                'cat_id' => $categoryid,
+                'subCatoryName' => $categoryName,
+                'cat_id' => $categoryid,
+                'image' => $photo,
+                'status' => $subCategoryStatus
+            );
 
 
+            $this->data['error'] = $this->Categorym->insertSubCategory($data);
+            if (empty($this->data['error'])) {
+
+                $this->session->set_flashdata('successMessage', ' Sub Category Added Successfully');
+                redirect('Category/subCategory');
+
+            } else {
+
+                $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
+                redirect('Category/subCategory');
+
+
+            }
+        } else {
+            redirect('Login');
+        }
+
+
+    }
+
+    public function getSubCategoryById()
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+
+            $sub_cat_id = $this->input->post('id');
+            $data['category'] = $this->Categorym->getAllCategory();
+            $data['subcategoryInfo'] = $this->Categorym->getSubCatgoryById($sub_cat_id);
+            $this->load->view('admin/updatesubCategory',$data);
+
+        } else {
+            redirect('Login');
+        }
+    }
+
+
+    public  function  updateSubCategory($id)
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+            $categoryName = $this->input->post('subcatagoryname');
+            $categoryid = $this->input->post('categoryid');
+            $subCategoryStatus = $this->input->post('subCategoryStatus');
+//            $path = './assets/admin/uploads/subCatogory/';
+            $path= './assets/admin/uploads/subCatogory/';
+            $photo = $this->uploadPhoto($path);
+            $userId = $this->session->userdata('id');
+            $data = array(
+                'InsertBy' => $userId,
+                'cat_id' => $categoryid,
+                'subCatoryName' => $categoryName,
+                'cat_id' => $categoryid,
+                'image' => $photo,
+                'status' => $subCategoryStatus
+            );
+
+
+            $this->data['error'] = $this->Categorym->updateSubCategory($id, $data);
+            if (empty($this->data['error'])) {
+
+                $this->session->set_flashdata('successMessage', 'Sub Category  Update Successfully');
+                redirect('Category/subCategory');
+
+            } else {
+
+                $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
+                redirect('Category/subCategory');
+
+
+            }
+        } else {
+            redirect('Login');
+        }
+
+
+    }
+    public function deletesubCategoryById()
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+
+            $id = $this->input->post('id');
+            $this->Categorym->deletesubCategoryById($id);
+
+        }
+        else{
+            redirect('Login');
+        }
+    }
 
 }

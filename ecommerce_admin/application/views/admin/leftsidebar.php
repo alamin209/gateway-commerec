@@ -4,24 +4,11 @@
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="<?php echo base_url()?>">
+                    <a class="active" href="<?php echo base_url()?>admin">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
-
-<<<<<<< HEAD
-<!--                <li>-->
-<!--                    <a class="active" href="--><?php //echo base_url()?><!--Category">-->
-<!--                        <i class="icon-food"></i>-->
-<!--                        <span>Category</span>-->
-<!--                    </a>-->
-<!--                    <ul class="sub">-->
-<!--                        <li><a href="typography.html">Sub Category</a></li>-->
-<!--                        <li><a href="glyphicon.html">glyphicon</a></li>-->
-<!--                        <li><a href="grids.html">Grids</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
 
                 <li class="sub-menu">
                     <a href="javascript:;">
@@ -31,13 +18,21 @@
                     <ul class="sub">
                         <li><a href="<?php echo base_url() ?>Category">Category</a></li>
                         <li><a href="<?php echo base_url() ?>Category/subCategory">Sub-Category</a></li>
-                        <li><a href="grids.html">Grids</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <a class="active" href="<?php echo base_url()?>Product">
+                        <i class="fa fa-product-hunt"></i>
+                        <span>Product</span>
+                    </a>
+                </li>
+
                 <li>
                     <a class="active" href="<?php echo base_url()?>User">
                         <i class="fa icon-user "></i>
                         <span>User</span>
+                    </a>
                  <li>
                     <a href="<?php echo base_url('Slide')?>">
                         <i class="fa fa-dashboard"></i>

@@ -18,8 +18,8 @@ abstract class Base_Controller extends CI_Controller
         print_r($data);
         exit();
     }
-    public function uploadPhoto(){
-        $config['upload_path'] = './assets/admin/uploads/';
+    public function uploadPhoto($path){
+        $config['upload_path'] = $path;
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = 1024;
         // $config['max_width'] = 300;
@@ -37,8 +37,8 @@ abstract class Base_Controller extends CI_Controller
             return $config['upload_path'] . $fdata['file_name'];
         }
     }//uploadPhoto
-    public function updatePhoto(){
-        $config['upload_path'] = './assets/backend/uploads/';
+    public function updatePhoto($path){
+        $config['upload_path'] = $path;
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = 1024;
         // $config['max_width'] = 300;
