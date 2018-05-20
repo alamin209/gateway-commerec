@@ -21,12 +21,25 @@
                     </ul>
                 </li>
 
-                <li>
-                    <a class="active" href="<?php echo base_url()?>Product">
-                        <i class="fa fa-product-hunt"></i>
-                        <span>Product</span>
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="icon-food"></i>
+                        <span>Mange Product</span>
                     </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo base_url() ?>Product/addProduct">Add Product</a></li>
+                        <li><a href="<?php echo base_url() ?>Product">All Product </a></li>
+                    </ul>
                 </li>
+
+<!--                -->
+<!--                <li>-->
+<!--                    <a class="active" href="--><?php //echo base_url()?><!--Product">-->
+<!--                        <i class="fa fa-product-hunt"></i>-->
+<!--                        <span>Product</span>-->
+<!--                    </a>-->
+<!--                </li>-->
 
                 <li>
                     <a class="active" href="<?php echo base_url()?>User">
@@ -40,12 +53,7 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="<?php echo base_url()?>Category">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Category</span>
-                    </a>
-                </li>
+
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>

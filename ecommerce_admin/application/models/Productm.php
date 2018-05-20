@@ -12,4 +12,15 @@ class Productm extends CI_Model
         return $query->result();
     }
 
+
+    public function getProductById($p_id)
+    {
+        $this->db->from('subcatgory');
+        $this->db->where('cat_id', $p_id)->select('*');
+        $query = $this->db->get();
+        return $query->result();
+
+
+    }
+
 }

@@ -37,6 +37,7 @@
                             <th> Name</th>
                             <th>Email</th>
                             <th data-breakpoints="xs">User Activation status</th>
+                            <th>User Type</th>
                             <th>Address</th>
                             <th>Action</th>
 
@@ -54,7 +55,7 @@
                                 <td><?php  echo $u->name ?></td>
 <!--                                <td><img src="--><?php // echo $c->image ?><!--" alt="productimage"  hight="100px" width="125px" ></td>-->
                                 <td><?php echo $u->email ?></td>
-                                <td> <?Php if($u->userActivationStatus==1)
+                                <td> <?php if($u->userActivationStatus==1)
                                     {
                                         echo "Active";
                                     }
@@ -63,6 +64,11 @@
                                         echo "In-Active";
                                     }
                                     ?> </td>
+                                <td>
+                                </td>
+                                <td><?php echo $u->fkUserType ?></td>
+
+                                </td>
 
                                 <td>
                                       <?php echo $u->address ?>,<?php echo $u->postalCode ?>,<?php echo $u->fkCity ?>,<?php echo $u->Country ?>
