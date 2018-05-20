@@ -17,8 +17,8 @@
       <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+            <state relative-caret-position="1088">
+              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -26,12 +26,30 @@
       <file leaf-file-name="addProduct.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="94" column="54" lean-forward="true" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+            <state relative-caret-position="340">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
-                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#4;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../techcloudeallproject/tanuki/admin/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="25" column="94" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -40,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/application/models/Productm.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -48,8 +66,8 @@
       <file leaf-file-name="Categorym.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Categorym.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="62" selection-end-column="32" />
+            <state relative-caret-position="986">
+              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="62" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -57,7 +75,7 @@
       <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
+            <state relative-caret-position="1462">
               <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
             </state>
           </provider>
@@ -66,7 +84,7 @@
       <file leaf-file-name="allCategory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/allCategory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="2465">
               <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="25" />
             </state>
           </provider>
@@ -75,8 +93,8 @@
       <file leaf-file-name="addNewSubCategory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addNewSubCategory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="39" column="14" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="663">
+              <caret line="39" column="14" selection-start-line="26" selection-start-column="7" selection-end-line="39" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -108,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/admin/editUser.php" />
         <option value="$PROJECT_DIR$/application/views/admin/newCategory.php" />
         <option value="$PROJECT_DIR$/application/core/Base_Controller.php" />
@@ -128,6 +145,8 @@
         <option value="$PROJECT_DIR$/application/views/admin/drodown.php" />
         <option value="$PROJECT_DIR$/application/views/admin/dropdown.php" />
         <option value="$PROJECT_DIR$/application/controllers/Product.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/../../../techcloudeallproject/tanuki/admin/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addProduct.php" />
       </list>
     </option>
@@ -142,10 +161,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="371" />
+    <option name="x" value="-43" />
+    <option name="y" value="99" />
     <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="height" value="579" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -158,42 +177,25 @@
           <expand>
             <path>
               <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce_admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce_admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce_admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ecommerce_admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce_admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -203,7 +205,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../tanuki" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../techcloudeallproject/tanuki" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -232,17 +234,18 @@
       <workItem from="1526557148167" duration="1615000" />
       <workItem from="1526704477530" duration="18144000" />
       <workItem from="1526790522329" duration="19044000" />
+      <workItem from="1526851418321" duration="1368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64085000" />
+    <option name="totallyTimeSpent" value="65453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3290938" />
@@ -426,8 +429,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+        <state relative-caret-position="221">
+          <caret line="25" column="94" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -450,13 +453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../all_project/1_mg/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="30" lean-forward="true" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../all_project/1_mg/application/config/database.php" />
     <entry file="file://$PROJECT_DIR$/application/core/Base_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
@@ -504,9 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/js.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -551,15 +545,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/allCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="2465">
           <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/addNewSubCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="663">
+          <caret line="39" column="14" selection-start-line="26" selection-start-column="7" selection-end-line="39" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -586,39 +580,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Categorym.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="62" selection-end-column="32" />
+        <state relative-caret-position="986">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="62" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+        <state relative-caret-position="1088">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Productm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
+        <state relative-caret-position="1462">
           <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../techcloudeallproject/tanuki/admin/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/addProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="94" column="54" lean-forward="true" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+        <state relative-caret-position="340">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#4;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

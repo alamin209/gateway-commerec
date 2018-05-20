@@ -53,8 +53,15 @@
 
                                         </div>
                                     </div>
+
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label" id="Item_price" >Product Description </label>
+                                        <label class="control-label col-md-3">product Price  : </label>
+                                        <div class="col-md-6">
+                                            <input class="form-control input-height" type="text" name="price">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="Item_price">
+                                        <label class="col-sm-3 control-label"  >Product Description </label>
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control" name="name" >
                                         </div>
@@ -72,19 +79,19 @@
                                             <div id="TextBoxDiv1" >
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3">Size/Extra #1 : </label>
-                                                    <div class="col-md-5">
+                                                    <div class="col-md-6">
                                                         <input class="form-control input-height" type='textbox' id='textbox1' name="textbox[]" >
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3">Price #1 : </label>
-                                                    <div class="col-md-5">
+                                                    <div class="col-md-6">
                                                         <input class="form-control input-height" type='textbox' id='textimage1' name="textprice[]">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3">Status #1: </label>
-                                                    <div class="col-md-5">
+                                                    <div class="col-md-6">
                                                         <select class="form-control input-height"  name="itemsizeStatus[]">
                                                             <option value="">Select...</option>
                                                             <option value="1">Active</option>
@@ -103,12 +110,12 @@
 
                                     </div>
 
-                                    <div class="form-group" id="Item_price">
-                                        <label class="col-sm-3 control-label">Product Description </label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="focusedInput" type="text"  name="p_desc" >
-                                        </div>
-                                    </div>
+<!--                                    <div class="form-group" id="Item_price">-->
+<!--                                        <label class="col-sm-3 control-label">Product Description </label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input class="form-control" id="focusedInput" type="text"  name="p_desc" >-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">Image</label>
                                         <div class="col-sm-6">
