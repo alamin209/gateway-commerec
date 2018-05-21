@@ -33,7 +33,7 @@
                                             <select class="form-control input-height" required id="cit" name="categoryid">
                                                 <option value="">select  Category</option>
                                                 <?php foreach ($category as $category) { ?>
-                                                    <option value="<?php echo $category->id ?>"><?php echo $category->name ?></option>
+                                                    <option value="<?php echo $category->category_id ?>"><?php echo $category->name ?></option>
 
                                                 <?php } ?>
                                             </select>
@@ -54,21 +54,36 @@
                                         </div>
                                     </div>
 
+
                                     <div class="form-group">
                                         <label class="control-label col-md-3">product Price  : </label>
                                         <div class="col-md-6">
-                                            <input class="form-control input-height" type="text" name="price">
+                                            <input class="form-control input-height" type="number" name="itemPrice">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">product  Quantity  : </label>
+                                        <div class="col-md-6">
+                                            <input class="form-control input-height" type="number" name="qty">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">product  Code  : </label>
+                                        <div class="col-md-6">
+                                            <input class="form-control input-height" type="number" name="code">
+                                        </div>
+                                    </div>
+
+
                                     <div class="form-group" id="Item_price">
                                         <label class="col-sm-3 control-label"  >Product Description </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" name="name" >
+                                            <input type="text" class="form-control" name="p_desc" >
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3">If you want to add any Size click </label>
+                                        <label class="control-label col-md-3">If you want to add any Optional Information  </label>
                                         <div class="col-md-5">
                                             <input class="btn btn-success" type="button" name = 'add' value='Add' onclick="selectid2()">
                                         </div>
@@ -100,7 +115,6 @@
                                                         </select>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <div id="add_remove_button" class="form-group" style="margin-left: 230px">

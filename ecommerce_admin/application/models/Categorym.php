@@ -6,7 +6,7 @@ class Categorym extends CI_Model
     public function getAllCategory()
     {
 //        $this->db->select('*','DESC');
-        $this->db->order_by("id", "desc");
+        $this->db->order_by("category_id", "desc");
         $query = $this->db->get('catagory');
         return $query->result();
     }
@@ -57,7 +57,7 @@ class Categorym extends CI_Model
     public function getCatgoryById($cat_id)
     {
         $this->db->from('catagory');
-        $this->db->where('id', $cat_id)->select(['id', 'name', 'CategoryStatus', 'image']);
+        $this->db->where('category_id', $cat_id)->select(['category_id', 'name', 'CategoryStatus', 'image']);
         $query = $this->db->get();
 
         return $query->result();
@@ -65,7 +65,7 @@ class Categorym extends CI_Model
 
     public function updateCategoryById($id, $data)
     {
-        $error = $this->db->where('id', $id)->update('catagory', $data);
+        $error = $this->db->where('category_id', $id)->update('catagory', $data);
 
         if (empty($error)) {
             return $this->db->error();
@@ -101,7 +101,7 @@ class Categorym extends CI_Model
 
     public function deleteCategoryById($id)
     {
-        $this->db->where('id', $id)->delete('catagory');
+        $this->db->where('category_id', $id)->delete('catagory');
 
     }
 

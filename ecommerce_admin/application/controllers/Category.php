@@ -113,7 +113,7 @@ class Category extends Base_Controller {
                 $CategoryStatus = $this->input->post('CategoryStatus');
                 $userId = $this->session->userdata('id');
                 $path='./assets/admin/uploads/';
-                $photo = $this->uploadPhoto($path);
+                $photo = $this->updatePhoto($path);
                 $data = array(
                     'name' => $categoryName,
                     'fkInsertBy' => $userId,

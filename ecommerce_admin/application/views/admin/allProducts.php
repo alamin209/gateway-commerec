@@ -20,17 +20,6 @@
                     <div class="alert alert-success" align="center"><strong><?php echo $this->session->flashdata('successMessage');?></strong></div>
                 <?php }?>
                 <br/>
-
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="btn-group">
-                            <button id="addRow" onclick="selectid1(this)" class="btn btn-info" style="z-index: inherit">
-                                Add New <i class="fa fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
                 <div>
                     <table class="table" ui-jq="footable" ui-options='{
         "paging": {
@@ -45,52 +34,56 @@
                         <thead>
                         <tr >
                             <th data-breakpoints="xs">Sr.NO</th>
-                            <th> Name</th>
-                            <th>Image</th>
-                            <th>Status</th>
-                            <th data-breakpoints="xs">Adding Date</th>
+                            <th> Product Name</th>
+                            <th>Product Category </th>
+                            <th>Product Code </th>
+                            <th>Product Quantity</th>
+                            <th> Price </th>
+                            <th>Product Image</th>
+                            <th> Status</th>
                             <th>Action</th>
 
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $i=0; $i=1; foreach ($allProducts.php as $p)
+                        <?php $i=0; $i=1; foreach ($product as $p)
                         { ?>
 
+<!--                        --><?php //print_r($p) ?>
 
-                            <?php print_r($p)  ?>
+                        <tr class="odd gradeX">
+                                <td><?php echo $i ?></td>
 
+                                <td><?php  echo $p->p_name ?></td>
+                            <td><?php  echo $p->name?></td>
+                            <td><?php  echo $p->pro_code ?></td>
+                            <td><?php  echo $p->qty ?></td>
+                            <td><?php  echo $p->price ?></td>
+                            <td> <img src="<?php  echo $p->image ?>" alt="image" height="150px" width="150"></td>
+                                <td><?php
+                                    if($p->status =="1" )
+                                    {
+                                        echo "Active";
+                                    }
 
-<!--                            <tr class="odd gradeX">-->
-<!---->
-<!--                                <td>--><?php //echo $i ?><!--</td>-->
-<!--                                <td>--><?php // echo $s->subCatoryName ?><!--</td>-->
-<!--                                <td><img src="--><?php // echo base_url().$s->image ?><!--" alt="productimage"  hight="100px" width="125px" ></td>-->
-<!--                                <td>--><?php
-//                                    if($s->status =="1" )
-//                                    {
-//                                        echo "Active";
-//                                    }
-//
-//                                    if($s->status =="0" )
-//                                    {
-//                                        echo "In-Active";
-//                                    }
-//                                    ?><!--</td>-->
-<!--                                <td>--><?php //echo $s->insertDate ?><!--</td>-->
-<!--                                <td class="center">-->
-<!--                                    <button  class="btn btn-primary btn-xs"  data-panel-id="--><?php //echo $s->sub_catgoryId?><!--" onclick="selectid2(this)">-->
-<!---->
-<!--                                        <i class="fa fa-pencil"></i>-->
-<!--                                    </button>-->
-<!---->
-<!--                                    <button type="button" data-panel-id="--><?php //echo $s->sub_catgoryId?><!--" onclick="selectid3(this)"class="btn btn-danger btn-xs">-->
-<!---->
-<!--                                        <i class="fa fa-trash-o "></i>-->
-<!--                                    </button>-->
-<!--                                </td>-->
-<!---->
-<!--                            </tr>-->
+                                    if($p->status =="0" )
+                                    {
+                                        echo "In-Active";
+                                    }
+                                    ?></td>
+                                <td class="center">
+                                    <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $p->product_id?>" onclick="selectid2(this)">
+
+                                        <i class="fa fa-pencil"></i>
+                                    </button>
+
+                                    <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
+
+                                        <i class="fa fa-trash-o "></i>
+                                    </button>
+                                </td>
+
+                            </tr>
 
                             <?php $i++; } ?>
 

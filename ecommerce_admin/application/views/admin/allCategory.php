@@ -63,12 +63,12 @@
                             <td><img src="<?php  echo $c->image ?>" alt="productimage"  hight="100px" width="125px" ></td>
                             <td> img<?php echo $c->insertDate ?></td>
                             <td class="center">
-                                <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $c->id ?>" onclick="selectid2(this)">
+                                <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $c->category_id ?>" onclick="selectid2(this)">
 
                                     <i class="fa fa-pencil"></i>
                                 </button>
 
-                                <button type="button" data-panel-id="<?php echo $c->id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
+                                <button type="button" data-panel-id="<?php echo $c->category_id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
 
                                     <i class="fa fa-trash-o "></i>
                                 </button>

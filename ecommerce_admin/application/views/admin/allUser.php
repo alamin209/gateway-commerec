@@ -64,14 +64,12 @@
                                         echo "In-Active";
                                     }
                                     ?> </td>
-                                <td>
-                                </td>
                                 <td><?php echo $u->fkUserType ?></td>
 
                                 </td>
 
                                 <td>
-                                      <?php echo $u->address ?>,<?php echo $u->postalCode ?>,<?php echo $u->fkCity ?>,<?php echo $u->Country ?>
+                                      <?php echo $u->address ?>,<?php echo $u->postalCode ?>,<?php echo $u->fkCity ?>
                                 </td>
                                 <td class="center">
                                     <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $u->id ?>" onclick="selectid2(this)">
