@@ -37,7 +37,7 @@ class Productm extends CI_Model
 
  public  function insertproductSizedata($productSizedata)
   {
-      $this->security->xss_clean($$productSizedata);
+//      $this->security->xss_clean($$productSizedata);
       $error = $this->db->insert('products_details', $productSizedata);
 
       if (empty($error)) {

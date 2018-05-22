@@ -73,7 +73,7 @@ class Product extends Base_Controller
         $p_desc = $this->input->post('p_desc');
         $status = $this->input->post('status');
         $textbox = $this->input->post('textbox[]');
-        $textprice = $this->input->post('textprice[]');
+//        $textprice = $this->input->post('textprice[]');
         $price  = $this->input->post('itemPrice');
         $itemsizeStatus = $this->input->post('itemsizeStatus[]');
         $qty  = $this->input->post('qty');
@@ -92,18 +92,20 @@ class Product extends Base_Controller
             'insertby'=>$userId,
             'status' => $status,
             'pro_code'=>$code,
-            'image'=>$photo
+             'p_desc'=>$p_desc,
+               'qty'=>$qty,
+            'image'=>$photo,
 
         );
 
             $product= $this->Productm->insertItemdata($data);
 
-            if(array_filter($textbox)==null && array_filter($textprice) ==null) {
+            if(array_filter($textbox)==null) {
                 $productSizedata = array(
                     'product_id'=>$product,
-                    'price' => $price,
-                    'desc'=>$p_desc,
-                    'qty'=>$qty
+//                    'price' => $textbox,
+//                    'desc'=>$p_desc,
+//                    'qty'=>$qty
                 );
 
 
@@ -115,10 +117,10 @@ class Product extends Base_Controller
 
                     $productSizedata = array(
                         'product_id'=>$product,
-                        'price' => $textprice[$i],
-                        'desc'=>$textbox[$i],
-                        'status'=>$itemsizeStatus[$i],
-                        'qty'=>$qty
+//                        'price' => $textprice[$i],
+                        'optional'=>$textbox[$i],
+//                        'status'=>$itemsizeStatus[$i],
+//                        'qty'=>$qty
                     );
 
 

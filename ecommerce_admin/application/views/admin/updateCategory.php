@@ -1,5 +1,5 @@
 <?php  foreach ($categoryInfo as $c) { ?>
-<form action="<?php echo base_url()?>Category/updateCategoryById/<?php echo $c->id ?>"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
+<form action="<?php echo base_url()?>Category/updateCategoryById/<?php echo $c->category_id ?>"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
     <div class="form-body">
 
 <!--        --><?php /*echo $categoryInfo */?>

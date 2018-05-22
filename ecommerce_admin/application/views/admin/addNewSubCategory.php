@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3"> Sub Category Status
+            <label class="control-label col-md-3">Select Category
                 <span class="required"> * </span>
             </label>
             <div class="col-md-5">
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">Category Status
+            <label class="control-label col-md-3">Sub Category Status
                 <span class="required"> * </span>
             </label>
             <div class="col-md-5">

@@ -16,6 +16,12 @@
                             <header class="panel-heading">
                                 Form Elements
                             </header>
+                            <?php if ($this->session->flashdata('errorMessage')!=null){?>
+                                <div class="alert alert-danger" align="center"><strong><?php echo $this->session->flashdata('errorMessage');?></strong></div>
+                            <?php }
+                            elseif($this->session->flashdata('successMessage')!=null){?>
+                                <div class="alert alert-success" align="center"><strong><?php echo $this->session->flashdata('successMessage');?></strong></div>
+                            <?php }?>
                             <div class="panel-body">
                                 <form  action="<?php echo base_url() ?>Product/newProduct "  class="form-horizontal bucket-form" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
@@ -75,13 +81,14 @@
                                     </div>
 
 
-                                    <div class="form-group" id="Item_price">
+                                    <div class="form-group">
                                         <label class="col-sm-3 control-label"  >Product Description </label>
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control" name="p_desc" >
                                         </div>
                                     </div>
 
+                                    <div id="Item_price"> </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3">If you want to add any Optional Information  </label>
                                         <div class="col-md-5">
@@ -93,28 +100,28 @@
                                         <div id='TextBoxesGroup'>
                                             <div id="TextBoxDiv1" >
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3">Size/Extra #1 : </label>
+                                                    <label class="control-label col-md-3"> /Weight/Size/Extra #1 : </label>
                                                     <div class="col-md-6">
-                                                        <input class="form-control input-height" type='textbox' id='textbox1' name="textbox[]" >
+                                                        <input class="form-control input-height"  placeholder="Add your optional  description 1 " type='textbox' id='textbox1' name="textbox[]" >
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3">Price #1 : </label>
-                                                    <div class="col-md-6">
-                                                        <input class="form-control input-height" type='textbox' id='textimage1' name="textprice[]">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3">Status #1: </label>
-                                                    <div class="col-md-6">
-                                                        <select class="form-control input-height"  name="itemsizeStatus[]">
-                                                            <option value="">Select...</option>
-                                                            <option value="1">Active</option>
-                                                            <option value="0">Inactive</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
+<!--                                                <div class="form-group">-->
+<!--                                                    <label class="control-label col-md-3">Price #1 : </label>-->
+<!--                                                    <div class="col-md-6">-->
+<!--                                                        <input class="form-control input-height" type='textbox' id='textimage1' name="textprice[]">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <label class="control-label col-md-3">Status #1: </label>-->
+<!--                                                    <div class="col-md-6">-->
+<!--                                                        <select class="form-control input-height"  name="itemsizeStatus[]">-->
+<!--                                                            <option value="">Select...</option>-->
+<!--                                                            <option value="1">Active</option>-->
+<!--                                                            <option value="0">Inactive</option>-->
+<!---->
+<!--                                                        </select>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                             </div>
                                         </div>
                                         <div id="add_remove_button" class="form-group" style="margin-left: 230px">
@@ -123,13 +130,6 @@
                                         </div>
 
                                     </div>
-
-<!--                                    <div class="form-group" id="Item_price">-->
-<!--                                        <label class="col-sm-3 control-label">Product Description </label>-->
-<!--                                        <div class="col-sm-6">-->
-<!--                                            <input class="form-control" id="focusedInput" type="text"  name="p_desc" >-->
-<!--                                        </div>-->
-<!--                                    </div>-->
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">Image</label>
                                         <div class="col-sm-6">
@@ -241,25 +241,8 @@
 //                );
             newTextBoxDiv.after().html('<div class="form-group">'+
                 '<label class="control-label col-md-3">Size/Extra #'+ counter + ' : </label>'+
-                '<div class="col-md-5">'+
+                '<div class="col-md-6">'+
                 '<input class="form-control input-height" type="textbox" id="textbox1" name="textbox[]" >'+
-                '</div>'+
-                '</div>'+
-                '<div class="form-group">'+
-                '<label class="control-label col-md-3">Price #'+ counter + ' : </label>'+
-                '<div class="col-md-5">'+
-                '<input class="form-control input-height" type="textbox" id="textimage1" name="textprice[]">'+
-                '</div>'+
-                '</div>'+
-                '</div>'+
-                '<div class="form-group">'+
-                '<label class="control-label col-md-3">Status: #' +counter+'</label>'+
-                '<div class="col-md-5">'+
-                '<select class="form-control input-height"  name="itemsizeStatus[]">'+
-                '<option value="">Select...'+'</option>'+
-                '<option value="1">Active'+'</option>'+
-                '<option value="0">Inactive'+'</option>'+
-                '</select>'+
                 '</div>'+
                 '</div>'
             );

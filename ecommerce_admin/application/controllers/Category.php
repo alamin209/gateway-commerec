@@ -256,9 +256,8 @@ class Category extends Base_Controller {
             $categoryName = $this->input->post('subcatagoryname');
             $categoryid = $this->input->post('categoryid');
             $subCategoryStatus = $this->input->post('subCategoryStatus');
-//            $path = './assets/admin/uploads/subCatogory/';
             $path= './assets/admin/uploads/subCatogory/';
-            $photo = $this->uploadPhoto($path);
+            $photo = $this->updatePhoto($path);
             $userId = $this->session->userdata('id');
             $data = array(
                 'InsertBy' => $userId,

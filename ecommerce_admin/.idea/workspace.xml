@@ -17,17 +17,8 @@
       <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="115" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Base_Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/core/Base_Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="4471">
+              <caret line="263" column="40" selection-start-line="263" selection-start-column="40" selection-end-line="263" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -35,21 +26,29 @@
       <file leaf-file-name="addProduct.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/addProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="35" column="100" selection-start-line="35" selection-start-column="100" selection-end-line="35" selection-end-column="100" />
+            <state relative-caret-position="326">
+              <caret line="102" column="92" selection-start-line="102" selection-start-column="92" selection-end-line="102" selection-end-column="92" />
               <folding>
-                <element signature="n#style#0;n#div#6;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#6;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#8;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/allUser.php">
+      <file leaf-file-name="Productm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/Productm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+            <state relative-caret-position="258">
+              <caret line="39" column="44" selection-start-line="39" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatesubCategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/updatesubCategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -57,31 +56,8 @@
       <file leaf-file-name="allProducts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/allProducts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="-799">
               <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="allCategory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/allCategory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="55" column="67" lean-forward="true" selection-start-line="55" selection-start-column="67" selection-end-line="55" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Productm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Productm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -89,19 +65,46 @@
       <file leaf-file-name="Categorym.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Categorym.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="1717">
+              <caret line="101" column="38" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="allCategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/allCategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="20" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newCategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/newCategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addNewSubCategory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/addNewSubCategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="1227">
+              <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
               <folding>
-                <marker date="1526886673053" expanded="true" signature="2417:2478" ph="..." />
+                <marker date="1526964898379" expanded="true" signature="2480:2541" ph="..." />
               </folding>
             </state>
           </provider>
@@ -125,12 +128,12 @@
       <find>$photo = $this-&gt;uploadPhoto($path);</find>
       <find>getSubCategoryById</find>
       <find>updateCategoryById</find>
-      <find>deleteCategoryById</find>
       <find>getProduct</find>
       <find>insertSubCategory($data)</find>
       <find>example</find>
       <find>updatePhoto($path)</find>
       <find>textbox</find>
+      <find>deleteCategoryById</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -139,25 +142,25 @@
         <option value="$PROJECT_DIR$/application/views/admin/editUser.php" />
         <option value="$PROJECT_DIR$/application/views/admin/newCategory.php" />
         <option value="$PROJECT_DIR$/application/core/Base_Controller.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/updateCategory.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/updatesubCategory.php" />
         <option value="$PROJECT_DIR$/application/views/admin/allSubCategory.php" />
         <option value="$PROJECT_DIR$/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/application/models/Userm.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/addNewSubCategory.php" />
         <option value="$PROJECT_DIR$/application/views/admin/leftsidebar.php" />
         <option value="$PROJECT_DIR$/application/views/admin/drodown.php" />
         <option value="$PROJECT_DIR$/application/views/admin/dropdown.php" />
         <option value="$PROJECT_DIR$/../../../techcloudeallproject/tanuki/admin/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/admin/allUser.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Category.php" />
         <option value="$PROJECT_DIR$/application/views/admin/allCategory.php" />
         <option value="$PROJECT_DIR$/application/models/Categorym.php" />
-        <option value="$PROJECT_DIR$/application/models/Productm.php" />
         <option value="$PROJECT_DIR$/application/views/admin/allProducts.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/addProduct.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/updateCategory.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/addNewSubCategory.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/updatesubCategory.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Category.php" />
         <option value="$PROJECT_DIR$/application/controllers/Product.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/addProduct.php" />
+        <option value="$PROJECT_DIR$/application/models/Productm.php" />
       </list>
     </option>
   </component>
@@ -257,12 +260,13 @@
       <workItem from="1526704477530" duration="18144000" />
       <workItem from="1526790522329" duration="19044000" />
       <workItem from="1526851418321" duration="1368000" />
-      <workItem from="1526875519465" duration="10098000" />
+      <workItem from="1526875519465" duration="14438000" />
+      <workItem from="1526964005427" duration="1495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75551000" />
+    <option name="totallyTimeSpent" value="81386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -296,6 +300,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3927">
+          <caret line="231" column="66" lean-forward="true" selection-start-line="231" selection-end-line="232" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#8;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/leftsidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -465,13 +479,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../../all_project/1_mg/application/config/database.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/admin/newCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Loginm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150" />
@@ -526,27 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/updatesubCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addNewSubCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="14" selection-start-line="26" selection-start-column="7" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/updateCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/editUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
@@ -576,9 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/Base_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -586,59 +569,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Category.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/updateCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="115" selection-end-column="51" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/newCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/updatesubCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Categorym.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="1717">
+          <caret line="101" column="38" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4471">
+          <caret line="263" column="40" selection-start-line="263" selection-start-column="40" selection-end-line="263" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/allCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="55" column="67" lean-forward="true" selection-start-line="55" selection-start-column="67" selection-end-line="55" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Productm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/allProducts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="-799">
           <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addProduct.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addNewSubCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="35" column="100" selection-start-line="35" selection-start-column="100" selection-end-line="35" selection-end-column="100" />
-          <folding>
-            <element signature="n#style#0;n#div#6;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#6;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="1227">
+          <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
           <folding>
-            <marker date="1526886673053" expanded="true" signature="2417:2478" ph="..." />
+            <marker date="1526964898379" expanded="true" signature="2480:2541" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="102" column="92" selection-start-line="102" selection-start-column="92" selection-end-line="102" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#8;n#form#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Productm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="39" column="44" selection-start-line="39" selection-end-line="40" />
         </state>
       </provider>
     </entry>

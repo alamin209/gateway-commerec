@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3"> Sub Category Status
+            <label class="control-label col-md-3"> Category  Name
                 <span class="required"> * </span>
             </label>
             <div class="col-md-5">
@@ -18,14 +18,14 @@
                 <select class="form-control input-height" required id="city" name="categoryid">
                     <option value="">select  Category</option>
                     <?php foreach ($category as $category) { ?>
-                        <option value="<?php echo $category->id  ?>" <?php if(!empty($s->cat_id) && $category->id== $s->cat_id )  echo 'selected="selected"'  ?>"><?php echo $category->name ?></option>
+                        <option value="<?php echo $category->category_id  ?>" <?php if(!empty($s->cat_id) && $category->category_id== $s->cat_id )  echo 'selected="selected"'  ?>"><?php echo $category->name ?></option>
 
                     <?php } ?>
                 </select>
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">Category Status
+            <label class="control-label col-md-3">Sub Category Status
                 <span class="required"> * </span>
             </label>
             <div class="col-md-5">
