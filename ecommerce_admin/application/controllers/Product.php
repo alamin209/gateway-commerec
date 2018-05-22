@@ -15,6 +15,7 @@ class Product extends Base_Controller
     {
         if ($this->session->userdata('userType') == "Admin") {
 
+            $this->data['product_d'] = $this->Productm->getProductDetails();
             $this->data['product'] = $this->Productm->getProduct();
             $this->load->view('admin/allProducts', $this->data);
         }
@@ -83,7 +84,6 @@ class Product extends Base_Controller
             $photo = $this->uploadPhoto($path);
 
 
-
             $data = array
         (
             'category_id' => $categoryid,
@@ -94,7 +94,7 @@ class Product extends Base_Controller
             'pro_code'=>$code,
              'p_desc'=>$p_desc,
                'qty'=>$qty,
-            'image'=>$photo,
+            'p_image'=>$photo,
 
         );
 

@@ -8,12 +8,20 @@ class Productm extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('products');
-//        $this->db->join('catagory','catagory.category_id=products.category_id');
         $this->db->join('catagory','catagory.category_id=products.category_id');
-        $this->db->join('products_details','products_details.product_id=products.product_id');
         $query = $this->db->get();
         return $query->result();
     }
+
+   public  function getProductDetails()
+   {
+       $this->db->select('*','DESC');
+       $this->db->from('products_details');
+//       $this->bd->where('product_id');
+       $query = $this->db->get();
+       return $query->result();
+
+   }
 
 
     public function getProductById($p_id)
@@ -29,7 +37,9 @@ class Productm extends CI_Model
 
     public  function  insertItemdata($data)
    {
-        $this->db->insert('products', $data);
+       $this->security->xss_clean($data);
+
+       $this->db->insert('products', $data);
         $product_id=$this->db->insert_id();
         return $product_id;
 
@@ -37,9 +47,8 @@ class Productm extends CI_Model
 
  public  function insertproductSizedata($productSizedata)
   {
-//      $this->security->xss_clean($$productSizedata);
+      $this->security->xss_clean($productSizedata);
       $error = $this->db->insert('products_details', $productSizedata);
-
       if (empty($error)) {
           return $this->db->error();
       } else {

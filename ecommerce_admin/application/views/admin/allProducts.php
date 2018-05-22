@@ -11,7 +11,7 @@
             <div class="panel panel-default">
 
                 <div class="panel-heading">
-                    Sub Category
+                     Product List
                 </div>
                 <?php if ($this->session->flashdata('errorMessage')!=null){?>
                     <div class="alert alert-danger" align="center"><strong><?php echo $this->session->flashdata('errorMessage');?></strong></div>
@@ -21,7 +21,7 @@
                 <?php }?>
                 <br/>
                 <div>
-                    <table class="table" ui-jq="footable" ui-options='{
+                    <table    border="1px sold black"  class="table" ui-jq="footable" ui-options='{
         "paging": {
           "enabled": true
         },
@@ -33,14 +33,14 @@
         }}'>
                         <thead>
                         <tr >
-                            <th data-breakpoints="xs">Sr.NO</th>
+                            <th>Sr.NO</th>
                             <th> Product Name</th>
                             <th>Product Category </th>
-                            <th>Product Code </th>
                             <th>Product Quantity</th>
-                            <th> Price </th>
                             <th>Product Image</th>
-                            <th> Status</th>
+                            <th> Price </th>
+                            <th> Extra size details </th>
+                            <th>Status</th>
                             <th>Action</th>
 
                         </tr>
@@ -54,12 +54,51 @@
                         <tr class="odd gradeX">
                                 <td><?php echo $i ?></td>
 
-                                <td><?php  echo $p->p_name ?></td>
+                                <td><?php  echo $p->p_name ?>
+
+                                </td>
                             <td><?php  echo $p->name?></td>
                             <td><?php  echo $p->pro_code ?></td>
-                            <td><?php  echo $p->qty ?></td>
-                            <td><?php  echo $p->price ?></td>
-                            <td> <img src="<?php  echo $p->image ?>" alt="image" height="150px" width="150"></td>
+<!--                            <td>--><?php // echo $p->qty ?><!--</td>-->
+                            <td> <img src="<?php   echo base_url(). $p->p_image ?>" alt="image" height="75px" width="75px"></td>
+
+                            <td><?php  echo $p->product_price?></td>
+                            <td>
+                                <div class="table table-responsive">
+                                 <table style="margin-bottom: 5px" class="orderexmple table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
+
+                                     <?php foreach ($product_d  as $d ) {  ?>
+                                         <?php  if( $p->product_id== $d->product_id ) { ?>
+                                        <tr>
+
+                                         <td>
+
+                                   <?php echo $d->optional ?>
+                                         </td>
+                                            <td>
+                                       <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $d->id?>" onclick="selectid2(this)">
+                                                <i class="fa fa-pencil"></i>
+                                                    </button>
+
+                                         <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
+
+                                              <i class="fa fa-trash-o "></i>
+                                        </button>
+
+                                           </td>
+                                     </tr>
+                                     <?php  } } ?>
+
+
+                                     <tr>
+                                   <button id="addRow" onclick="selectid1(this)" class="btn btn-info" style="z-index: inherit">
+                                    Add New <i class="fa fa-plus"></i>
+                                </button>
+                                     </tr>
+                                 </table>
+                                </div>
+                                </td>
+
                                 <td><?php
                                     if($p->status =="1" )
                                     {
@@ -83,9 +122,11 @@
                                     </button>
                                 </td>
 
+
+
                             </tr>
 
-                            <?php $i++; } ?>
+                            <?php $i++; }?>
 
                         </tbody>
                     </table>
