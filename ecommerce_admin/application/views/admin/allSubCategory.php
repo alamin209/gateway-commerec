@@ -80,7 +80,7 @@
                                         <i class="fa fa-pencil"></i>
                                     </button>
 
-                                    <button type="button" data-panel-id="<?php echo $s->sub_catgoryId?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
+                                    <button type="button" data-panel-id="<?php echo $s->sub_catgoryId?>" onclick="selectid3(this)" class="btn btn-danger btn-xs">
 
                                         <i class="fa fa-trash-o "></i>
                                     </button>
@@ -177,7 +177,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '<?php echo base_url("Category/deleteCategoryById")?>',
+                url: '<?php echo base_url("Category/deletesubCategoryById")?>',
                 data: {id: btn},
                 cache: false,
                 success: function (data) {

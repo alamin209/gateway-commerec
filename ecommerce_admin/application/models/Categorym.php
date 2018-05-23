@@ -108,7 +108,7 @@ class Categorym extends CI_Model
 
         public function deletesubCategoryById($id)
         {
-            $this->db->where('sub_catgoryId', $id)->delete('subcatgory');
+            $this->db->where('sub_catgoryId',$id)->delete('subcatgory');
 
         }
 

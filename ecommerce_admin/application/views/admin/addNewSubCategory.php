@@ -17,7 +17,7 @@
                 <select class="form-control input-height" required id="city" name="categoryid">
                     <option value="">select  Category</option>
                     <?php foreach ($category as $category) { ?>
-                        <option value="<?php echo $category->id ?>"><?php echo $category->name ?></option>
+                        <option value="<?php echo $category->category_id ?>"><?php echo $category->name ?></option>
 
                     <?php } ?>
                 </select>

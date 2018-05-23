@@ -49,7 +49,6 @@
                         <?php $i=0; $i=1; foreach ($product as $p)
                         { ?>
 
-<!--                        --><?php //print_r($p) ?>
 
                         <tr class="odd gradeX">
                                 <td><?php echo $i ?></td>
@@ -59,7 +58,6 @@
                                 </td>
                             <td><?php  echo $p->name?></td>
                             <td><?php  echo $p->pro_code ?></td>
-<!--                            <td>--><?php // echo $p->qty ?><!--</td>-->
                             <td> <img src="<?php   echo base_url(). $p->p_image ?>" alt="image" height="75px" width="75px"></td>
 
                             <td><?php  echo $p->product_price?></td>
@@ -80,18 +78,18 @@
                                                 <i class="fa fa-pencil"></i>
                                                     </button>
 
-                                         <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
+                                         <button type="button" data-panel-id="<?php echo $d->id?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
 
                                               <i class="fa fa-trash-o "></i>
                                         </button>
 
                                            </td>
                                      </tr>
-                                     <?php  } } ?>
+                                     <?php  }}?>
 
 
                                      <tr>
-                                   <button id="addRow" onclick="selectid1(this)" class="btn btn-info" style="z-index: inherit">
+                                   <button id="addRow"  data-panel-id="<?php echo $p->product_id ?>" onclick="selectid1(this)" class="btn btn-info" style="z-index: inherit">
                                     Add New <i class="fa fa-plus"></i>
                                 </button>
                                      </tr>
@@ -111,15 +109,16 @@
                                     }
                                     ?></td>
                                 <td class="center">
-                                    <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $p->product_id?>" onclick="selectid2(this)">
+                                    <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $p->product_id?>" onclick="selectid4(this)">
 
                                         <i class="fa fa-pencil"></i>
                                     </button>
 
-                                    <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid3(this)"class="btn btn-danger btn-xs">
-
+                                    <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid4(this)"class="btn btn-danger btn-xs">
                                         <i class="fa fa-trash-o "></i>
                                     </button>
+
+
                                 </td>
 
 
@@ -170,19 +169,22 @@
 
     function selectid1(x)
     {
+        btn = $(x).data('panel-id');
 
         $.ajax({
             type:'POST',
-            url:'<?php echo base_url("Category/newSubCategory" )?>',
-            data:{},
+            url:'<?php echo base_url("Product/newOptionalProduct")?>',
+            data:{id:btn},
             cache: false,
-            success:function(data)
-            {
-                $('#txtHint').html(data);
-            }
+            success:function(data) {
 
+                $('#txtHint').html(data);
+
+            }
         });
         modal.style.display = "block";
+
+
     }
 
     function selectid2(x)
@@ -192,7 +194,7 @@
 
         $.ajax({
             type:'POST',
-            url:'<?php echo base_url("Category/getSubCategoryById")?>',
+            url:'<?php echo base_url("Product/getOptionalProductId")?>',
             data:{id:btn},
             cache: false,
             success:function(data) {
@@ -208,24 +210,42 @@
     function selectid3(x)
     {
 
-        if (confirm("are you sure to delete this Sub Category?"))
+        if (confirm("are you sure delete this Extra ?"))
         {
 
             btn = $(x).data('panel-id');
-
             $.ajax({
                 type: 'POST',
-                url: '<?php echo base_url("Category/deleteCategoryById")?>',
+                url:'<?php echo base_url("Product/deleteOptional")?>',
                 data: {id: btn},
                 cache: false,
                 success: function (data) {
-                    alert(' Sub Category deleted Successfully');
+                    alert(' Extra deleted Successfully');
                     location.reload();
                 }
 
             });
         }
     }
+
+    function selectid4(x)
+    {
+
+        btn = $(x).data('panel-id');
+        $.ajax({
+            type:'POST',
+            url:'<?php echo base_url("Product/getproductInfoById")?>',
+            data:{id:btn},
+            cache: false,
+            success:function(data) {
+
+                $('#txtHint').html(data);
+
+            }
+        });
+        modal.style.display = "block";
+    }
+
     // When the user clicks * of the modal, close it
     span.onclick = function() {
         modal.style.display = "none";

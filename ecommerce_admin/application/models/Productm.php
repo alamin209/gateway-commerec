@@ -12,6 +12,14 @@ class Productm extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function getproductInfoById($product_id)
+    {
+        $this->db->from('products');
+        $this->db->where('product_id', $product_id)->select('*');
+        $query = $this->db->get();
+        return $query->result();
+
+    }
 
    public  function getProductDetails()
    {
@@ -24,6 +32,36 @@ class Productm extends CI_Model
    }
 
 
+
+   public  function getOptionalProductId($optional_id)
+   {
+
+       $this->db->from('products_details');
+       $this->db->where('id', $optional_id)->select('*');
+       $query = $this->db->get();
+       return $query->result();
+   }
+
+
+   public function updateoptional($id, $productSizedata)
+   {
+       $error = $this->db->where('id', $id)->update('products_details', $productSizedata);
+
+       if (empty($error)) {
+           return $this->db->error();
+       } else {
+
+           return $error = null;
+       }
+   }
+
+    public function deleteOptional($id)
+    {
+        $this->db->where('id', $id)->delete('products_details');
+
+    }
+
+
     public function getProductById($p_id)
     {
         $this->db->from('subcatgory');
@@ -33,6 +71,9 @@ class Productm extends CI_Model
 
 
     }
+
+
+
 
 
     public  function  insertItemdata($data)

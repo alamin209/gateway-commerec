@@ -64,9 +64,6 @@ class Category extends Base_Controller {
 
             );
 
-            print_r($data);
-            exit;
-
             $this->data['error'] = $this->Categorym->insertCategory($data);
 
             if (empty($this->data['error'])) {
@@ -145,18 +142,18 @@ class Category extends Base_Controller {
         }
     }
 
-    public function deleteCategoryById()
-    {
-        if ($this->session->userdata('userType') == "Admin") {
-
-            $id = $this->input->post('id');
-            $this->Categorym->deleteCategoryById($id);
-
-        }
-        else{
-            redirect('Login');
-        }
-    }
+//    public function deletesubCategoryById()
+//    {
+//        if ($this->session->userdata('userType') == "Admin") {
+//
+//            $id = $this->input->post('id');
+//            $this->Categorym->deletesubCategoryById($id);
+//
+//        }
+//        else{
+//            redirect('Login');
+//        }
+//    }
 
     public  function subCategory()
     {
@@ -287,6 +284,21 @@ class Category extends Base_Controller {
         }
 
 
+
+    }
+    public function deleteCategoryById()
+    {
+        if ($this->session->userdata('userType') == "Admin") {
+
+            $id = $this->input->post('id');
+            $this->Categorym->deleteCategoryById($id);
+            $this->session->set_flashdata('successMessage','Category Delete Successfully');
+
+
+        }
+        else{
+            redirect('Login');
+        }
     }
     public function deletesubCategoryById()
     {
@@ -294,6 +306,8 @@ class Category extends Base_Controller {
 
             $id = $this->input->post('id');
             $this->Categorym->deletesubCategoryById($id);
+            $this->session->set_flashdata('successMessage','Sub Category Delete Successfully');
+
 
         }
         else{
