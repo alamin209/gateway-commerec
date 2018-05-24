@@ -68,9 +68,7 @@ class Product extends Base_Controller
             $p_desc = $this->input->post('p_desc');
             $status = $this->input->post('status');
             $textbox = $this->input->post('textbox[]');
-//        $textprice = $this->input->post('textprice[]');
             $price = $this->input->post('itemPrice');
-            $itemsizeStatus = $this->input->post('itemsizeStatus[]');
             $qty = $this->input->post('qty');
             $code = $this->input->post('code');
 
@@ -87,6 +85,7 @@ class Product extends Base_Controller
                 'status' => $status,
                 'pro_code' => $code,
                 'p_desc' => $p_desc,
+                'product_price' =>$price,
                 'qty' => $qty,
                 'p_image' => $photo,
 
@@ -97,9 +96,7 @@ class Product extends Base_Controller
             if (array_filter($textbox) == null) {
                 $productSizedata = array(
                     'product_id' => $product,
-//                    'price' => $textbox,
-//                    'desc'=>$p_desc,
-//                    'qty'=>$qty
+
                 );
 
 
@@ -111,8 +108,6 @@ class Product extends Base_Controller
                         'product_id' => $product,
 //                        'price' => $textprice[$i],
                         'optional' => $textbox[$i],
-//                        'status'=>$itemsizeStatus[$i],
-//                        'qty'=>$qty
                     );
 
 
@@ -155,46 +150,45 @@ class Product extends Base_Controller
 
        if ($this->session->userdata('userType') == "Admin") {
 
-           echo "meet you tomorrow ";
-           exit;
-
+           $UserID = $this->input->post('id1');
            $userId = $this->session->userdata('id');
            $name = $this->input->post('name');
            $categoryid = $this->input->post('categoryid');
            $subcategoryid = $this->input->post('subcategoryid');
            $p_desc = $this->input->post('p_desc');
            $status = $this->input->post('status');
-           $price = $this->input->post('itemPrice');
            $qty = $this->input->post('qty');
            $code = $this->input->post('code');
+           $price = $this->input->post('itemPrice');
+           $this->db->set('category_id', $categoryid);
+           $this->db->set('subcat_id', $subcategoryid);
+           $this->db->set('p_name', $name);
+           $this->db->set('pro_code', $code);
+           $this->db->set('p_desc', $p_desc);
+           $this->db->set('product_price', $price);
+           $this->db->set('qty', $qty);
+           $this->db->set('insertby',$userId);
+           if(isset($UserID) && $UserID != ''){
 
-           $path = './assets/admin/uploads/ProductImage/';
-           $photo = $this->uploadPhoto($path);
+               $data = array('product_id'=>$UserID);
+               $prev_info = $this->db->get_where("products",$data)->row();
+               if(isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '')){
+                   unlink($prev_info->p_image);
+               }
+           }
 
-
-           $data = array
-           (
-               'category_id' => $categoryid,
-               'subcat_id' => $subcategoryid,
-               'p_name' => $name,
-               'insertby' => $userId,
-               'status' => $status,
-               'pro_code' => $code,
-               'p_desc' => $p_desc,
-               'qty' => $qty,
-               'p_image' => $photo,
-
-           );
-
-           $product = $this->Productm->updateProduct($data);
-
+           if(isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '') ){
+               $path = './assets/admin/uploads/ProductImage/';
+               $photo = $this->updatePhoto($path);
+           }
+           $this->data['error'] = $this->Productm->commonUpdate( $UserID,'products');
 
            if (empty($this->data['error'])) {
                $this->session->set_flashdata('successMessage', 'Product  Added Successfully');
-               redirect('Product/addProduct');
+               redirect('Product');
            } else {
-               $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
-               redirect('Product/addProduct');
+               $this->session->set_flashdata('successMessage', 'Product  Added Successfully');
+               redirect('Product');
            }
 
 
@@ -205,6 +199,20 @@ class Product extends Base_Controller
 
 
 
+
+   }
+
+   public function deleteProduct()
+   {
+       if ($this->session->userdata('userType') == "Admin") {
+
+           $id = $this->input->post('id');
+           $this->Productm->deleteProduct($id);
+           $this->session->set_flashdata('successMessage', 'Product Delete Successfully');
+
+       } else {
+           redirect('Login');
+       }
    }
 
     /////////////////optionla part////////////////////////////

@@ -16,7 +16,7 @@ class Base_Model extends CI_Model{
 
     public function commonUpdate($UserID, $tbl){
 
-        return $this->db->where('id', $UserID)->update($tbl);
+        return $this->db->where('product_id', $UserID)->update($tbl);
 
     }
 

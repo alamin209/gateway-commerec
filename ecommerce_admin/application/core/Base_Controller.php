@@ -53,9 +53,8 @@ abstract class Base_Controller extends CI_Controller
             redirect(current_url());
         }else{
             $fdata=$this->upload->data();
-            return $config['upload_path'] . $fdata['file_name'];
-            $img = $config['upload_path'].$photo_name;
-            $this->db->set('photo', $img);
+            $img = $config['upload_path'] . $fdata['file_name'];
+            $this->db->set('p_image', $img);
         }
     }//updatePhoto
     public function pagination($base_url, $per_page, $total)

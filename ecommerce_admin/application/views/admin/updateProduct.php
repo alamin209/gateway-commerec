@@ -1,10 +1,16 @@
 <?php foreach ($productinfo as $p) { ?>
 
-                            <form  action="<?php echo base_url() ?>Product/updateProduct/<?php echo $p->product_id ?> "  class="form-horizontal bucket-form" method="post" enctype="multipart/form-data">
+                            <form  action="<?php echo base_url() ?>Product/updateProduct"  class="form-horizontal bucket-form" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Product name</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" name="name" value="<?php echo  $p->p_name ?>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Product name</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="id1" value="<?php echo  $p->product_id ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -29,7 +35,7 @@
                                     </label>
                                     <div class="col-md-6">
 
-                                        <select class="form-control input-height  id="city" name="categoryid">
+                                        <select class="form-control input-height  id="city" name="subcategoryid">
                                         <?php foreach ($subcategory as $sub) { ?>
                                             <option value="<?php echo $sub->sub_catgoryId?>" <?php if(!empty($p->subcat_id) && $sub->sub_catgoryId== $p->subcat_id )  echo 'selected="selected"'  ?>"><?php echo $sub->subCatoryName ?></option>
                                         <?php } ?>
@@ -69,6 +75,12 @@
                                     <label class="col-sm-3 control-label">Image</label>
                                     <div class="col-sm-6">
                                         <input type="file" class="form-control" name="photo">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Image</label>
+                                    <div class="col-sm-6">
+                                        <img src="<?php print base_url($p->p_image);?>"  name="photo"   height="150px" width="120px">
                                     </div>
                                 </div>
                                 <div class="form-group">

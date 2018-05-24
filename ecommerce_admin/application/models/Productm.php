@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Productm extends CI_Model
+class Productm extends Base_Model
 {
 
     public function getProduct()
@@ -23,13 +23,25 @@ class Productm extends CI_Model
 
    public  function getProductDetails()
    {
-       $this->db->select('*','DESC');
+       $this->db->select('*');
        $this->db->from('products_details');
-//       $this->bd->where('product_id');
        $query = $this->db->get();
        return $query->result();
 
    }
+
+//   public function updateProduct($id,$data)
+//   {
+//       $error = $this->db->where('product_id', $id)->update('products', $data);
+//
+//       if (empty($error)) {
+//           return $this->db->error();
+//       } else {
+//
+//           return $error = null;
+//       }
+//
+//   }
 
 
 
@@ -61,6 +73,11 @@ class Productm extends CI_Model
 
     }
 
+    public function deleteProduct($id)
+    {
+        $this->db->where('product_id', $id)->delete('products');
+
+    }
 
     public function getProductById($p_id)
     {

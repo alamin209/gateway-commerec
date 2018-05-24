@@ -114,7 +114,7 @@
                                         <i class="fa fa-pencil"></i>
                                     </button>
 
-                                    <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid4(this)"class="btn btn-danger btn-xs">
+                                    <button type="button" data-panel-id="<?php echo $p->product_id ?>" onclick="selectid5(this)"class="btn btn-danger btn-xs">
                                         <i class="fa fa-trash-o "></i>
                                     </button>
 
@@ -221,6 +221,26 @@
                 cache: false,
                 success: function (data) {
                     alert(' Extra deleted Successfully');
+                    location.reload();
+                }
+
+            });
+        }
+    }
+    function selectid5(x)
+    {
+
+        if (confirm("are you sure delete this Product ?"))
+        {
+
+            btn = $(x).data('panel-id');
+            $.ajax({
+                type: 'POST',
+                url:'<?php echo base_url("Product/deleteProduct")?>',
+                data: {id: btn},
+                cache: false,
+                success: function (data) {
+                    alert(' Product deleted Successfully');
                     location.reload();
                 }
 
