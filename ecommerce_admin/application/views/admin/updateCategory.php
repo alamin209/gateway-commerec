@@ -1,8 +1,7 @@
 <?php  foreach ($categoryInfo as $c) { ?>
-<form action="<?php echo base_url()?>Category/updateCategoryById/<?php echo $c->category_id ?>"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
+<form action="<?php echo base_url()?>Category/updateCategoryById/"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
     <div class="form-body">
 
-<!--        --><?php /*echo $categoryInfo */?>
 
         <div class="form-group">
 
@@ -11,12 +10,9 @@
                 <input type="text" name="catagoryname" value="<?php echo $c->name ?>"  required class="form-control input-height" />
             </div>
         </div>
-        <!--        <div class="form-group">-->
-        <!--            <label class="control-label col-md-3"> Description<span class="required"> * </span></label>-->
-        <!--             <div class="col-md-5">-->
-        <!--                <input type="text" name="description" placeholder="Give Offer  description"  class="form-control input-height" />-->
-        <!--            </div>-->
-        <!--        </div>-->
+
+        <input type="hidden" class="form-control" name="id1" value="<?php echo  $c->category_id ?>">
+
         <div class="form-group">
             <label class="control-label col-md-3">Category Status
                 <span class="required"> * </span>
@@ -31,6 +27,12 @@
                     <option value="0" <?php echo ($c->CategoryStatus=='0')?'selected="selected"':''; ?>>In-Active</option>
                 </select>
 
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Image</label>
+            <div class="col-sm-6">
+                <img src="<?php print base_url($c->image);?>"  name="photo"   height="150px" width="120px">
             </div>
         </div>
         <div class="form-group">

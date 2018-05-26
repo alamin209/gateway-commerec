@@ -60,7 +60,7 @@
 
                             <td><?php echo $i ?></td>
                             <td><?php  echo $c->name ?></td>
-                            <td><img src="<?php  echo $c->image ?>" alt="productimage"  hight="100px" width="125px" ></td>
+                            <td><img src="<?php  echo base_url(). $c->image ?>" alt="productimage"  hight="100px" width="125px" ></td>
                             <td> img<?php echo $c->insertDate ?></td>
                             <td class="center">
                                 <button  class="btn btn-primary btn-xs"  data-panel-id="<?php echo $c->category_id ?>" onclick="selectid2(this)">

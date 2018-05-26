@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class Categorym extends CI_Model
+class Categorym extends Base_Model
 {
     public function getAllCategory()
     {
@@ -63,19 +63,23 @@ class Categorym extends CI_Model
         return $query->result();
     }
 
-    public function updateCategoryById($id, $data)
-    {
-        $error = $this->db->where('category_id', $id)->update('catagory', $data);
+//    public function updateCategoryById($id, $data)
+//    {
+//        $error = $this->db->where('category_id', $id)->update('catagory', $data);
+//
+//        if (empty($error)) {
+//            return $this->db->error();
+//        } else {
+//
+//            return $error = null;
+//        }
+//    }
 
-        if (empty($error)) {
-            return $this->db->error();
-        } else {
+    public function catgorynUpdate($UserID, $tbl){
 
-            return $error = null;
-        }
+        return $this->db->where('category_id', $UserID)->update($tbl);
+
     }
-
-
     public function getSubCatgoryById($sub_cat_id)
     {
 

@@ -1,5 +1,5 @@
 <?php foreach ($subcategoryInfo as $s) { ?>
-<form action="<?php echo base_url()?>Category/updateSubCategory/<?php echo $s->sub_catgoryId ?>"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
+<form action="<?php echo base_url()?>Category/updateSubCategory"  method="post" id="form_sample_1" class="form-horizontal" enctype="multipart/form-data">
     <div class="form-body">
 
         <div class="form-group">
@@ -9,6 +9,7 @@
                 <input type="text" name="subcatagoryname"  value="<?php echo $s->subCatoryName ?>" required class="form-control input-height" />
             </div>
         </div>
+                <input type="hidden" class="form-control" name="id1" value="<?php echo  $s->sub_catgoryId ?>">
         <div class="form-group">
             <label class="control-label col-md-3"> Category  Name
                 <span class="required"> * </span>
@@ -35,6 +36,12 @@
                     <option value="0" <?php echo ($s->status=='0')?'selected="selected"':''; ?>>In-Active</option>
                 </select>
 
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Image</label>
+            <div class="col-sm-6">
+                <img src="<?php print base_url($s->p_image);?>"  name="photo"   height="150px" width="120px">
             </div>
         </div>
         <div class="form-group">

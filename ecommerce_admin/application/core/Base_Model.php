@@ -19,6 +19,11 @@ class Base_Model extends CI_Model{
         return $this->db->where('product_id', $UserID)->update($tbl);
 
     }
+    public function subCategoryUpdate($UserID, $tbl){
+
+        return $this->db->where('sub_catgoryId', $UserID)->update($tbl);
+
+    }
 
 }//Base_Model
 

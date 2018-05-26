@@ -7,12 +7,7 @@
                                         <input type="text" class="form-control" name="name" value="<?php echo  $p->p_name ?>">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">Product name</label>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control" name="id1" value="<?php echo  $p->product_id ?>">
-                                    </div>
-                                </div>
+                                        <input type="hidden" class="form-control" name="id1" value="<?php echo  $p->product_id ?>">
                                 <div class="form-group">
                                     <label class="control-label col-md-3"> Slected
                                         <span class="required"> * </span>

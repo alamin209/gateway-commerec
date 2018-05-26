@@ -99,61 +99,70 @@ class Category extends Base_Controller {
         }
     }
 
-    public function updateCategoryById($id)
+    public function updateCategoryById()
     {
         if ($this->session->userdata('userType') == "Admin") {
 
+            $categoryName = $this->input->post('catagoryname');
+            $CategoryStatus = $this->input->post('CategoryStatus');
+            $userId = $this->session->userdata('id');
+            $UserID = $this->input->post('id1');
+            $path = './assets/admin/uploads/';
+//                $photo = $this->updateCatagegoryPhoto($path);
+            $this->db->set('name', $categoryName);
+            $this->db->set('fkInsertBy', $userId);
+            $this->db->set('CategoryStatus', $CategoryStatus);
 
-            if(isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '') ) {
-
-                $categoryName = $this->input->post('catagoryname');
-                $CategoryStatus = $this->input->post('CategoryStatus');
-                $userId = $this->session->userdata('id');
-                $path='./assets/admin/uploads/';
-                $photo = $this->updatePhoto($path);
-                $data = array(
-                    'name' => $categoryName,
-                    'fkInsertBy' => $userId,
-                    'CategoryStatus' => $CategoryStatus,
-                    'image' => $photo
-
-                );
-
-
-                $this->data['error'] = $this->Categorym->updateCategoryById($id, $data);
-
-
-                if (empty($this->data['error'])) {
-
-                    $this->session->set_flashdata('successMessage', 'Category Updated Successfully');
-                    redirect('Category');
-
-                } else {
-
-                    $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
-                    redirect('Category');
-
+            if (isset($UserID) && $UserID != '') {
+                $data = array('category_id' => $UserID);
+                $prev_info = $this->db->get_where("catagory", $data)->row();
+                if (isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '')) {
+                    unlink($prev_info->image);
                 }
             }
+
+            if (isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '')) {
+                $path = './assets/admin/uploads/';
+                $photo = $this->updateCatagegoryPhoto($path);
             }
 
-         else {
+
+            $this->data['error'] = $this->Categorym->catgorynUpdate($UserID, 'catagory');
+
+            if (empty($this->data['error'])) {
+                $this->session->set_flashdata('successMessage', 'Category   Update Successfully');
+                redirect('Category');
+            } else {
+                $this->session->set_flashdata('successMessage', 'Category  Update Successfully');
+                redirect('Category');
+            }
+        }
+
+
+else {
             redirect('login');
         }
     }
-
-//    public function deletesubCategoryById()
-//    {
-//        if ($this->session->userdata('userType') == "Admin") {
-//
-//            $id = $this->input->post('id');
-//            $this->Categorym->deletesubCategoryById($id);
-//
-//        }
-//        else{
-//            redirect('Login');
-//        }
-//    }
+    public function updateCatagegoryPhoto($path){
+        $config['upload_path'] = $path;
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $config['max_size'] = 1024;
+        // $config['max_width'] = 300;
+        // $config['max_height'] = 300;
+        $this->load->library('upload', $config);
+        $error='';
+        $fdata=array();
+        if ( ! $this->upload->do_upload('photo')){
+            $error = $this->upload->display_errors();
+            $dt['message'] = $error;
+            $this->session->set_userdata($dt);
+            redirect(current_url());
+        }else{
+            $fdata=$this->upload->data();
+            $img = $config['upload_path'] . $fdata['file_name'];
+            $this->db->set('image', $img);
+        }
+    }//updatePhoto
 
     public  function subCategory()
     {
@@ -247,41 +256,46 @@ class Category extends Base_Controller {
     }
 
 
-    public  function  updateSubCategory($id)
+    public  function  updateSubCategory()
     {
         if ($this->session->userdata('userType') == "Admin") {
             $categoryName = $this->input->post('subcatagoryname');
             $categoryid = $this->input->post('categoryid');
             $subCategoryStatus = $this->input->post('subCategoryStatus');
-            $path= './assets/admin/uploads/subCatogory/';
-            $photo = $this->updatePhoto($path);
             $userId = $this->session->userdata('id');
-            $data = array(
-                'InsertBy' => $userId,
-                'cat_id' => $categoryid,
-                'subCatoryName' => $categoryName,
-                'cat_id' => $categoryid,
-                'image' => $photo,
-                'status' => $subCategoryStatus
-            );
+            $UserID = $this->input->post('id1');
 
 
-            $this->data['error'] = $this->Categorym->updateSubCategory($id, $data);
-            if (empty($this->data['error'])) {
-
-                $this->session->set_flashdata('successMessage', 'Sub Category  Update Successfully');
-                redirect('Category/subCategory');
-
-            } else {
-
-                $this->session->set_flashdata('errorMessage', 'Some thing Went Wrong !! Please Try Again!!');
-                redirect('Category/subCategory');
-
-
+            $this->db->set('InsertBy', $userId);
+            $this->db->set('cat_id', $categoryid);
+            $this->db->set('status', $subCategoryStatus);
+            $this->db->set('subCatoryName', $categoryName);
+            if(isset($UserID) && $UserID != ''){
+                $data = array('sub_catgoryId'=>$UserID);
+                $prev_info = $this->db->get_where("subcatgory",$data)->row();
+                if(isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '')){
+                    unlink($prev_info->p_image);
+                }
             }
-        } else {
-            redirect('Login');
+
+            if(isset($_FILES['photo']['name']) && ($_FILES['photo']['name'] != '') ){
+            $path= './assets/admin/uploads/subCatogory/';
+                $photo = $this->updatePhoto($path);
+            }
+            $this->data['error'] = $this->Categorym->subCategoryUpdate( $UserID,'subcatgory');
+
+            if (empty($this->data['error'])) {
+                $this->session->set_flashdata('successMessage', 'SubCategory  Update Successfully');
+                redirect('Category/subCategory');
+            } else {
+                $this->session->set_flashdata('successMessage', 'SubCategory  Update Successfully');
+                redirect('Category/subCategory');
+            }
+
         }
+            else  {
+                    redirect('Login');
+                  }
 
 
 

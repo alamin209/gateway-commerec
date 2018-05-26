@@ -61,7 +61,8 @@
 
                                 <td><?php echo $i ?></td>
                                 <td><?php  echo $s->subCatoryName ?></td>
-                                <td><img src="<?php  echo base_url().$s->image ?>" alt="productimage"  hight="100px" width="125px" ></td>
+
+                                <td><img src="<?php  echo base_url().$s->p_image ?>" alt="productimage"  hight="100px" width="125px" ></td>
                                 <td><?php
                                     if($s->status =="1" )
                                     {
